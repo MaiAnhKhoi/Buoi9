@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng (lãi kép)</title>
+    <script>
+        // Nhập dữ liệu từ người dùng
+        let soTienGoc = +prompt("Nhập số tiền gửi ban đầu (VND):");
+        let soThang = +prompt("Nhập số tháng gửi:");
+        let laiSuatThang = +prompt("Nhập lãi suất hàng tháng (%):");
+
+        // Tính theo công thức lãi kép
+        let tyLe = laiSuatThang / 100;
+        let soTienCuoiKy = soTienGoc * Math.pow(1 + tyLe, soThang);
+        let tienLai = soTienCuoiKy - soTienGoc;
+
+        // Hiển thị kết quả
+        alert("Sau " + soThang + " tháng, bạn sẽ nhận được:\n" +
+            "Tổng tiền: " + soTienCuoiKy.toLocaleString() + " VND\n" +
+            "Tiền lãi: " + tienLai.toLocaleString() + " VND");
+    </script>
+</head>
+<body>
+</body>
+</html>

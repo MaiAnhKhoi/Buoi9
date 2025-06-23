@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let a = +prompt("Nhập hệ số a: ");
+        let b = +prompt("Nhập hệ số b: ");
+        if (a === 0 )
+        {
+            if (b === 0)
+            {
+                alert("Vô số nghiệm");
+            }
+            else{
+                alert("Vô nghiệm");
+            }
+        }
+        else{
+            alert("Có 1 nghiệm là: "+ parseFloat(-b/a));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

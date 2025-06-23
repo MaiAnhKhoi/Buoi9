@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button{
+            margin-left: 35px;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you love me</h1>
+<br>
+<button id="btnYes">Yes</button>
+<button id="btnNo">No</button>
+<script>
+    const btnYes = document.getElementById("btnYes");
+    const btnNo = document.getElementById("btnNo");
+
+    btnYes.addEventListener('click', event => {
+        alert("<3")
+    })
+    function init(button)
+    {
+        button.style.position =  'absolute';
+        button.style.left =  '0px';
+        button.style.top =  '0px';
+    }
+    maxX = window.innerWidth - btnNo.offsetWidth;
+    maxY = window.innerHeight - btnNo.offsetHeight;
+    btnNo.addEventListener('mouseover', event => {
+        newLeft = Math.random() * maxX;
+        newTop = Math.random() * maxY;
+        init(btnNo);
+        let left = parseInt(btnNo.style.left);
+        let top = parseInt(btnNo.style.top);
+        btnNo.style.left = (left + newLeft) + 'px';
+        btnNo.style.top = (top + newTop) + 'px';
+    })
+</script>
+</body>
+</html>

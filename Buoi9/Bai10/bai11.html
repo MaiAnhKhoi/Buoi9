@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế TNCN</title>
+    <script>
+        let tongThuNhap = +prompt("Nhập tổng thu nhập tháng (VNĐ):");
+        const giamTruBanThan = 11000000;
+
+        let thuNhapChiuThue = tongThuNhap - giamTruBanThan;
+        let thue = 0;
+
+        if (thuNhapChiuThue <= 0) {
+            thue = 0;
+        } else {
+            let t = thuNhapChiuThue;
+
+            if (t <= 5000000) {
+                thue = t * 0.05;
+            } else if (t <= 10000000) {
+                thue = 5000000 * 0.05 + (t - 5000000) * 0.10;
+            } else if (t <= 18000000) {
+                thue = 5000000 * 0.05 + 5000000 * 0.10 + (t - 10000000) * 0.15;
+            } else if (t <= 32000000) {
+                thue = 5000000 * 0.05 + 5000000 * 0.10 + 8000000 * 0.15 + (t - 18000000) * 0.20;
+            } else if (t <= 52000000) {
+                thue = 5000000 * 0.05 + 5000000 * 0.10 + 8000000 * 0.15 + 14000000 * 0.20 + (t - 32000000) * 0.25;
+            } else if (t <= 80000000) {
+                thue = 5000000 * 0.05 + 5000000 * 0.10 + 8000000 * 0.15 + 14000000 * 0.20 + 20000000 * 0.25 + (t - 52000000) * 0.30;
+            } else {
+                thue = 5000000 * 0.05 + 5000000 * 0.10 + 8000000 * 0.15 + 14000000 * 0.20 +
+                    20000000 * 0.25 + 28000000 * 0.30 + (t - 80000000) * 0.35;
+            }
+        }
+
+        alert("Thu nhập chịu thuế: " + thuNhapChiuThue.toLocaleString() + " VND\n" +
+            "Tiền thuế phải nộp: " + thue.toLocaleString() + " VND");
+    </script>
+</head>
+<body>
+</body>
+</html>

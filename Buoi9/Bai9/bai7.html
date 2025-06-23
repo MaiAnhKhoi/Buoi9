@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+    <script>
+        const PHI_THUE_BAO = 25000;
+        const CUOC_NOI_MANG = 1000;
+        const CUOC_NGOAI_MANG = 1500;
+        const CUOC_QUOC_TE = 5000;
+
+        let noiMang = +prompt("Nhập số phút gọi nội mạng:");
+        let ngoaiMang = +prompt("Nhập số phút gọi ngoại mạng:");
+        let quocTe = +prompt("Nhập số phút gọi quốc tế:");
+
+        let cuocNoiMang = noiMang * CUOC_NOI_MANG;
+        let cuocNgoaiMang = ngoaiMang * CUOC_NGOAI_MANG;
+        let cuocQuocTe = quocTe * CUOC_QUOC_TE;
+
+        let tongCuoc = PHI_THUE_BAO + cuocNoiMang + cuocNgoaiMang + cuocQuocTe;
+
+        let message = "== KẾT QUẢ TÍNH CƯỚC ==\n";
+        message += "Phí thuê bao: " + PHI_THUE_BAO.toLocaleString() + " VND\n";
+        message += "Cước gọi nội mạng: " + cuocNoiMang.toLocaleString() + " VND\n";
+        message += "Cước gọi ngoại mạng: " + cuocNgoaiMang.toLocaleString() + " VND\n";
+        message += "Cước gọi quốc tế: " + cuocQuocTe.toLocaleString() + " VND\n";
+        message += "TỔNG CƯỚC PHẢI TRẢ: " + tongCuoc.toLocaleString() + " VND";
+
+        alert(message);
+    </script>
+</head>
+<body>
+</body>
+</html>
