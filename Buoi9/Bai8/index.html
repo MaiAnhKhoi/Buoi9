@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Toggle Switch</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="my.js"></script>
 </head>
 <body>
-
-<div class="option">
-    <label>
-        <input type="checkbox" id="good" onchange="toggleOption('good')">
-        <span class="slider good"></span>
-        GOOD
-    </label>
-    <label>
-        <input type="checkbox" id="cheap" onchange="toggleOption('cheap')">
-        <span class="slider cheap"></span>
-        CHEAP
-    </label>
-    <label>
-        <input type="checkbox" id="fast" onchange="toggleOption('fast')">
-        <span class="slider fast"></span>
-        FAST
-    </label>
-</div>
-
-
+<table>
+    <tr>
+        <td><input onchange="changeGood()" type="checkbox" id="good"></td>
+        <td>Good</td>
+    </tr>
+    <tr>
+        <td><input onchange="changeCheap()" type="checkbox" id="cheap"></td>
+        <td>Cheap</td>
+    </tr>
+    <tr>
+        <td><input onchange="changeFast()" type="checkbox" id="fast"></td>
+        <td>Fast</td>
+    </tr>
+</table>
+<script src="my.js"></script>
 </body>
 </html>
